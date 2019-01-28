@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+
 
 @Component({
   selector: 'single-line-debounce',
@@ -16,10 +16,12 @@ export class SingleLineDebounceComponent implements OnInit {
 
   ngOnInit() {
     this.debounceChange$
-    .debounceTime(600)
-    .distinctUntilChanged()
-    .subscribe((value) => {
-      this.debounceValue = value;
-    });
+      .pipe(
+        debounceTime(600),
+        distinctUntilChanged()
+      )
+      .subscribe((value) => {
+        this.debounceValue = value;
+      });
   }
 }
