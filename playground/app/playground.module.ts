@@ -6,8 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FsExampleModule } from '@firestitch/example';
 import { FsMessageModule } from '@firestitch/message';
 
-import { ToastrModule } from 'ngx-toastr';
-
 import { AppMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { SingleLineComponent } from './components';
@@ -30,7 +28,6 @@ import { MultilineComponent } from './components';
     FormsModule,
     FsExampleModule.forRoot(),
     FsMessageModule.forRoot(),
-    ToastrModule.forRoot({ preventDuplicates: true }),
   ],
   entryComponents: [
   ],
