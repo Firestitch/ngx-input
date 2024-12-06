@@ -29,8 +29,6 @@ import { MultilineComponent } from './components';
     FsExampleModule.forRoot(),
     FsMessageModule.forRoot(),
   ],
-  entryComponents: [
-  ],
   declarations: [
     AppComponent,
     SingleLineComponent,

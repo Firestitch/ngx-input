@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'single-line',
-  templateUrl: 'single-line.component.html'
+  templateUrl: './single-line.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SingleLineComponent {
 }

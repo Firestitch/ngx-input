@@ -8,10 +8,9 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class FsInputModule {
-  static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders {
     return {
       ngModule: FsInputModule,
-      // providers: [FsComponentService]
     };
   }
 }

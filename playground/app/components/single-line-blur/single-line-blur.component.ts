@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'single-line-blur',
-  templateUrl: 'single-line-blur.component.html'
+  templateUrl: './single-line-blur.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleLineBlurComponent {
-  changeOnBlur(value) {
+
+  public changeOnBlur(value) {
     alert(`Change on Blur: ${value}`);
   }
+
 }
