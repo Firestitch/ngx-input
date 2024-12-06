@@ -1,4 +1,14 @@
 <mat-form-field>
-  <input matInput #input [value]="debounceValue" (keyup)="debounceChange$.next(input.value)" placeholder="Placeholder">
-  <mat-hint>Text will appear with a 600ms delay: {{ debounceValue }}</mat-hint>
+  <mat-label>
+    Debounce
+  </mat-label>
+  <input
+    [(ngModel)]="value"
+    [fsModelChangeOptions]="{ debounce: 600 }"
+    (fsModelChange)="change($event)"
+    name="input"
+    matInput>
+  <mat-hint>
+    Text will appear with a 600ms delay: {{ debounceValue }}
+  </mat-hint>
 </mat-form-field>

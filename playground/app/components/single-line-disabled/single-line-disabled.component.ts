@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'single-line-disabled',
