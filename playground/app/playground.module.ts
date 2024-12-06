@@ -39,9 +39,7 @@ import { MultilineComponent } from './components';
     SingleLineMaxLengthComponent,
     SingleLineBlurComponent,
     MultilineComponent,
-    SingleLinePreSuffixComponent
-  ],
-  providers: [
+    SingleLinePreSuffixComponent,
   ],
 })
 export class PlaygroundModule {

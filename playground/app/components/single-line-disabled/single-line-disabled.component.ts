@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'single-line-disabled',
-  templateUrl: 'single-line-disabled.component.html'
+  templateUrl: './single-line-disabled.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleLineDisabledComponent {
 }

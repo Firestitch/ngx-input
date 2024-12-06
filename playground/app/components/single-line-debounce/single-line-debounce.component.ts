@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 
 @Component({
   selector: 'single-line-debounce',
-  templateUrl: 'single-line-debounce.component.html'
+  templateUrl: './single-line-debounce.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleLineDebounceComponent implements OnInit {
 
-  debounceChange$ = new Subject<string>();
-  debounceValue: String = '';
+  public debounceChange$ = new Subject<string>();
+  public debounceValue: String = '';
 
-  constructor() {  }
-
-  ngOnInit() {
+  public ngOnInit() {
     this.debounceChange$
       .pipe(
         debounceTime(600),
