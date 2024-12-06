@@ -9,18 +9,13 @@ import { FsMessageModule } from '@firestitch/message';
 import { AppMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { SingleLineComponent } from './components';
-import { SingleLineHintComponent } from './components';
-import { SingleLineIconComponent } from './components';
-import { SingleLineDisabledComponent } from './components';
-import { SingleLineDebounceComponent } from './components';
-import { SingleLineMaxLengthComponent } from './components';
-import { SingleLineBlurComponent } from './components';
-import { SingleLinePreSuffixComponent } from './components';
-import { MultilineComponent } from './components';
+import { SingleLineHintComponent, SingleLineIconComponent, SingleLineDisabledComponent, 
+  SingleLineDebounceComponent, SingleLineMaxLengthComponent, SingleLineBlurComponent,
+  SingleLinePreSuffixComponent, MultilineComponent } from './components';
 
 
 @NgModule({
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
